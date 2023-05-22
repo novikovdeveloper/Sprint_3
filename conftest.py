@@ -3,15 +3,6 @@ import pytest
 from selenium import webdriver
 
 
-@pytest.fixture
-def default_email():
-    return 'test@1993.ru'
-
-
-@pytest.fixture
-def default_password():
-    return '123456'
-
 
 @pytest.fixture
 def driver():
@@ -19,11 +10,6 @@ def driver():
     driver.get("https://stellarburgers.nomoreparties.site/")
     yield driver
     driver.quit()
-
-
-@pytest.fixture
-def name():
-    return "Вася"
 
 
 @pytest.fixture
